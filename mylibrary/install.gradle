@@ -1,0 +1,39 @@
+apply plugin: 'com.github.dcendents.android-maven'
+
+group = 'com.mylibrary' // CREATE A GROUP ID FOR YOUR LIBRARY
+
+install {
+    repositories.mavenInstaller {
+        pom {
+            project {
+                packaging 'aar'
+                groupId 'com.mylibrary' // CREATE A GROUP ID FOR YOUR LIBRARY
+                artifactId 'helloworld' // THE NAME OF YOUR MODULE
+
+                name 'mylibrary' // YOUR LIBRARY NAME
+                description 'A sample library to display hello world.' // YOUR LIBRARY DESCRIPTION
+                url 'https://github.com/SupzRao/litleLibrary' // YOUR SITE
+
+                licenses {
+                    license {
+                        name 'The Apache Software License, Version 2.0'
+                        url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                    }
+                }
+                developers {
+                    developer {
+                        id 'suprada' //YOUR ID
+                        name 'suprada' //YOUR NAME
+                        email 'supradarao@gmail.com' //YOUR EMAIL
+                    }
+                }
+                scm {
+                    connection 'https://github.com/SupzRao/litleLibrary.git' // YOUR GIT REPO
+                    developerConnection 'https://github.com/SupzRao/litleLibrary.git' // YOUR GIT REPO
+                    url 'https://github.com/SupzRao/litleLibrary' // YOUR SITE
+
+                }
+            }
+        }
+    }
+}
